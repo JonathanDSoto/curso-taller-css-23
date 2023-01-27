@@ -1,0 +1,48 @@
+* {
+    /* background-color: green; */
+    margin: 0;
+    padding: 0;
+}
+
+/* Clase */
+.holaMundo {
+    background-color: red;
+    /* width: 200px; */
+}
+
+.contenedor {
+    font-size: 10px;
+}
+
+/* ID */
+p {
+    background-color: blue;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+li {
+    font-size: 25px;
+}
+
+.contenedor2 {
+    width: 100vw;
+    height: 100vh;
+
+    border: 10px solid black;
+}
+
+#hijo1 {
+    width: 50%;
+    height: 50%;
+
+    background: red;
+}
+
+
+#hijo2 {
+    width: 50%;
+    height: 50%;
+
+    background: rgba(194, 61, 0, 0.5);
+}
