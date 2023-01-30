@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .cajas {
+            width: 50%;
+            height: 50%;
+
+            border: 2px solid;
+            display: flex;
+            /*   flex-direction: column; */
+            position: relative;
+        }
+
+        .cajas div {
+            width: 150px;
+            height: 100%;
+            display: flex;
+        }
+
+        #hijo1 {
+            width: 50px;
+            height: 50px;
+            /* display: none; */
+            align-items: center;
+            justify-content: center;
+            background-color: blue;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.3em;
+
+            position: absolute;
+            right: -25px;
+            top: -25px;
+        }
+
+        #hijo2 {
+            background-color: red;
+        }
+
+        #hijo3 {
+            background-color: green;
+        }
+
+
+        /* Sticky */
+        .container-sticky {
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Reiniciando estilos */
+        .container-sticky .cajas div,
+        .container-sticky #hijo1 {
+            position: static;
+            width: calc(100% / 3);
+            height: 100%;
+            border-radius: 0;
+        }
+
+
+
+        .container-sticky .cajas {
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            z-index: 1;
+
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-sticky">
+        <div class="cajas">
+            <div id="hijo1">x</div>
+            <div id="hijo2"></div>
+            <div id="hijo3"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cajas">
+            <div id="hijo1">x</div>
+            <div id="hijo2"></div>
+            <div id="hijo3"></div>
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem mollitia, dolore eius voluptas ipsum
+        adipisci quod, recusandae, officia aperiam consequuntur cupiditate. Inventore quibusdam ad, iure dolorem iusto
+        cupiditate error. Mollitia illo suscipit voluptatum quisquam autem possimus delectus voluptas ex ducimus eius
+        laboriosam blanditiis doloremque quidem expedita dolores magnam omnis nisi repellendus, veniam ut libero eaque.
+        Maxime autem sequi tenetur enim illo eum porro quis ad consequatur voluptates est molestias temporibus rerum
+        animi dolor voluptatem neque excepturi, quaerat eaque corrupti ex magnam dolores. Voluptate eum perferendis
+        ducimus doloribus, distinctio eius nam eos iure quidem laudantium, in voluptas, tempore delectus. Tempora quam
+        possimus suscipit molestiae omnis incidunt nihil veniam facere neque quos consequatur, id, atque fugit
+        voluptates? Blanditiis tenetur consectetur vel voluptatem libero commodi fugit rerum error illo ipsum,
+        reiciendis accusantium architecto at temporibus. Fugit, esse pariatur illum autem odit rerum cumque
+        exercitationem, saepe eius delectus voluptatibus hic quos debitis voluptas earum natus. Impedit doloremque
+        nostrum hic, labore amet voluptas ad dolorem doloribus nihil corrupti nesciunt voluptatibus nisi porro qui
+        tenetur, nam nulla! Asperiores nisi, repellat ab laborum labore alias. Quam perferendis cupiditate earum!
+        Accusantium ratione deserunt reiciendis iste iure quibusdam officiis aut temporibus, similique dolorum amet
+        maiores corrupti labore eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem mollitia,
+        dolore eius voluptas ipsum adipisci quod, recusandae, officia aperiam consequuntur cupiditate. Inventore
+        quibusdam ad, iure dolorem iusto cupiditate error. Mollitia illo suscipit voluptatum quisquam autem possimus
+        delectus voluptas ex ducimus eius laboriosam blanditiis doloremque quidem expedita dolores magnam omnis nisi
+        repellendus, veniam ut libero eaque. Maxime autem sequi tenetur enim illo eum porro quis ad consequatur
+        voluptates est molestias temporibus rerum animi dolor voluptatem neque excepturi, quaerat eaque corrupti ex
+        magnam dolores. Voluptate eum perferendis ducimus doloribus, distinctio eius nam eos iure quidem laudantium, in
+        voluptas, tempore delectus. Tempora quam possimus suscipit molestiae omnis incidunt nihil veniam facere neque
+        quos consequatur, id, atque fugit voluptates? Blanditiis tenetur consectetur vel voluptatem libero commodi fugit
+        rerum error illo ipsum, reiciendis accusantium architecto at temporibus. Fugit, esse pariatur illum autem odit
+        rerum cumque exercitationem, saepe eius delectus voluptatibus hic quos debitis voluptas earum natus. Impedit
+        doloremque nostrum hic, labore amet voluptas ad dolorem doloribus nihil corrupti nesciunt voluptatibus nisi
+        porro qui tenetur, nam nulla! Asperiores nisi, repellat ab laborum labore alias. Quam perferendis cupiditate
+        earum! Accusantium ratione deserunt reiciendis iste iure quibusdam officiis aut temporibus, similique dolorum
+        amet maiores corrupti labore eum!
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem mollitia, dolore eius voluptas ipsum
+        adipisci quod, recusandae, officia aperiam consequuntur cupiditate. Inventore quibusdam ad, iure dolorem iusto
+        cupiditate error. Mollitia illo suscipit voluptatum quisquam autem possimus delectus voluptas ex ducimus eius
+        laboriosam blanditiis doloremque quidem expedita dolores magnam omnis nisi repellendus, veniam ut libero eaque.
+        Maxime autem sequi tenetur enim illo eum porro quis ad consequatur voluptates est molestias temporibus rerum
+        animi dolor voluptatem neque excepturi, quaerat eaque corrupti ex magnam dolores. Voluptate eum perferendis
+        ducimus doloribus, distinctio eius nam eos iure quidem laudantium, in voluptas, tempore delectus. Tempora quam
+        possimus suscipit molestiae omnis incidunt nihil veniam facere neque quos consequatur, id, atque fugit
+        voluptates? Blanditiis tenetur consectetur vel voluptatem libero commodi fugit rerum error illo ipsum,
+        reiciendis accusantium architecto at temporibus. Fugit, esse pariatur illum autem odit rerum cumque
+        exercitationem, saepe eius delectus voluptatibus hic quos debitis voluptas earum natus. Impedit doloremque
+        nostrum hic, labore amet voluptas ad dolorem doloribus nihil corrupti nesciunt voluptatibus nisi porro qui
+        tenetur, nam nulla! Asperiores nisi, repellat ab laborum labore alias. Quam perferendis cupiditate earum!
+        Accusantium ratione deserunt reiciendis iste iure quibusdam officiis aut temporibus, similique dolorum amet
+        maiores corrupti labore eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem mollitia,
+        dolore eius voluptas ipsum adipisci quod, recusandae, officia aperiam consequuntur cupiditate. Inventore
+        quibusdam ad, iure dolorem iusto cupiditate error. Mollitia illo suscipit voluptatum quisquam autem possimus
+        delectus voluptas ex ducimus eius laboriosam blanditiis doloremque quidem expedita dolores magnam omnis nisi
+        repellendus, veniam ut libero eaque. Maxime autem sequi tenetur enim illo eum porro quis ad consequatur
+        voluptates est molestias temporibus rerum animi dolor voluptatem neque excepturi, quaerat eaque corrupti ex
+        magnam dolores. Voluptate eum perferendis ducimus doloribus, distinctio eius nam eos iure quidem laudantium, in
+        voluptas, tempore delectus. Tempora quam possimus suscipit molestiae omnis incidunt nihil veniam facere neque
+        quos consequatur, id, atque fugit voluptates? Blanditiis tenetur consectetur vel voluptatem libero commodi fugit
+        rerum error illo ipsum, reiciendis accusantium architecto at temporibus. Fugit, esse pariatur illum autem odit
+        rerum cumque exercitationem, saepe eius delectus voluptatibus hic quos debitis voluptas earum natus. Impedit
+        doloremque nostrum hic, labore amet voluptas ad dolorem doloribus nihil corrupti nesciunt voluptatibus nisi
+        porro qui tenetur, nam nulla! Asperiores nisi, repellat ab laborum labore alias. Quam perferendis cupiditate
+        earum! Accusantium ratione deserunt reiciendis iste iure quibusdam officiis aut temporibus, similique dolorum
+        amet maiores corrupti labore eum!
+    </p>
+
+
+</body>
+
+</html>

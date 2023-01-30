@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+
+            /*   background-color: red; */
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+
+            background: green;
+        }
+
+        .container p {
+            color: white;
+        }
+
+        /* Selector adyacente */
+
+        .hermano2+.hermano4 {
+            background-color: red;
+
+        }
+
+        /* Selector hermano general */
+
+        .hermano1~div {
+            background-color: red;
+        }
+
+        /* Selector por atributo */
+
+        input[type="text"] {
+            background-color: green;
+        }
+
+        input[type="number"] {
+            background-color: red;
+        }
+
+        input[type="password"] {
+            background-color: blue;
+        }
+
+        input[type="password"]:empty {
+            border: 5px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selector por atributo</h1>
+    <div class="container">
+        <input class="campo" type="text" />
+        <input class="campo" type="text" />
+
+        <input class="campo" type="text" />
+        <input class="campo" type="number" />
+        <input class="campo" type="text" />
+        <input class="campo" type="text" required />
+    </div>
+
+    <br><br>
+    <h1>Selector "element > element" y "element element"</h1>
+    <div class="container">
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, in?</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <br><br>
+    <h1>Selector adyacente</h1>
+    <div class="container">
+        <div class="hermano1"></div>
+        <div class="hermano2"></div>
+        <div class="hermano3"></div>
+        <div class="hermano4"></div>
+    </div>
+
+
+</body>
+
+</html>
