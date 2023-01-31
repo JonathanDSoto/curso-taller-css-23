@@ -1,0 +1,292 @@
+/*
+    ATENCION: Agregue algunas cosas al documento html, como IDs y algunos elementos, pueden
+    descargar el documento de nuevo o pueden revisarlo para agregarlo. Lo hice con el fin de
+    mantener los diferentes efectos que se pueden hacer con las mascaras o textos.
+
+    Si tienen algunas dudas sobre alguna propiedad o sobre lo que se hizo en clase, no duden
+    en preguntar :) 
+*/
+
+/* 
+    Clase #5 - Elementos basicos CSS
+
+    Propiedades utilizadas en clase: 
+        - appearance:
+            Link: https://runebook.dev/es/docs/css/appearance
+            Link(ingles): https://developer.mozilla.org/en-US/docs/Web/CSS/appearance
+
+        - color 
+            Link: https://developer.mozilla.org/es/docs/Web/CSS/color_value
+
+        - box-sizing: 
+            link: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+
+        - display: flex 
+            Link: https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+            
+            Propiedades de flexbox:
+                - flex-direction
+                    Link: https://developer.mozilla.org/es/docs/Web/CSS/flex-direction
+                - flex-wrap
+                    Link: https://developer.mozilla.org/es/docs/Web/CSS/flex-wrap
+
+        - outline
+            Link: https://developer.mozilla.org/es/docs/Web/CSS/outline
+
+        - padding
+            Link: https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+        
+        - margin
+            Link: https://developer.mozilla.org/en-US/docs/Web/CSS/margin
+
+    
+    Pseudo-classes utilizadas en clase
+        Link: https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+
+            :focus 
+                Link: https://developer.mozilla.org/es/docs/Web/CSS/:focus
+
+            :valid
+                Link: https://developer.mozilla.org/es/docs/Web/CSS/:valid
+            :hover 
+                Link: https://developer.mozilla.org/es/docs/Web/CSS/:hover
+            :checked
+                Link: https://developer.mozilla.org/es/docs/Web/CSS/:checked
+            :visited
+                Link: https://developer.mozilla.org/es/docs/Web/CSS/:visited
+            :link: 
+                Link: https://developer.mozilla.org/es/docs/Web/CSS/:link 
+
+
+        
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-elemento {
+    width: 100%;
+    min-height: 100vh;
+
+    margin-bottom: 20px;
+}
+
+.campo-contenedor {
+    margin: 10px;
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.campo-contenedor input, .campo-contenedor select {
+    background-color: rgb(27, 27, 27);
+    padding-inline: 15px;
+    padding-block: 10px;
+    border: none;
+    
+    border-radius: 5px;
+    color: white;
+}
+
+.campo-contenedor input:focus {
+    outline: 2px solid green;
+}
+
+.campo-contenedor input[type="email"]:valid {
+    background-color: green;
+}
+
+/* Edtiando campo date */
+/* Aqui se esta ocultando el icono del calendario */
+.campo-contenedor input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+fieldset {
+    border: 2px dashed;
+    padding: 20px;
+}
+
+fieldset > div {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Checkbox y radio */
+
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    /* width: 5px;
+    height: 5px; */
+
+    background-color: white;
+    border: 1px solid green;
+}
+
+input[type="checkbox"]:checked {
+    background-color: green;
+}
+
+input[type="submit"] {
+    background-color: green;
+    padding: 10px;
+    border: 0;
+    margin: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(0, 75, 0);
+}
+
+
+/* Tablas */
+table {
+    width: 100%;
+}
+table, table * {
+    border: 1px solid black;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+caption {
+    background-color: #8d8d8d;
+    color: white;
+    margin-bottom: 10px;
+    caption-side: bottom;
+}
+
+/* Enlaces */
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: grab;
+    width: 50px;
+    height: 25px;
+    border: 1px solid;
+    padding: 5px;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:link {
+    color: green;
+}
+
+/* Listas */
+
+ul {
+    padding: 0;
+    border: 1px solid black;
+}
+
+li {
+    list-style-type: square;
+    /* list-style-image: url(pikachu.png); */
+    list-style-position: inside;
+}
+
+/* Imagenes */
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    filter: blur(2px);
+    transition-duration: .5s;
+    /* transition: all ease 0.5s; */
+
+    /* aspect-ratio: 1/1; */
+}
+
+img:hover {
+    filter: blur(0px);
+}
+
+/* Mascara */
+
+.imagen {
+    width: 100%;
+    height: 100vh;
+    background: url(mexico.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    -webkit-mask-image: url(pikachu.png);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+}
+
+/* Efecto con texto y mascaras */
+
+#efecto p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#efecto p {
+    font-size: 20em;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* text-shadow: 1px 1px 2px pink, 1px 1px 2px pink; */
+    transition-duration: 0.5s;
+    background-attachment: fixed;
+    /* text-shadow: 1px 1px 0px #4208ed, 2px 2px 0px red; */
+}
+
+#efecto p:hover {
+    text-shadow: 5px 5px 0px #4208ed, 10px 10px 0px red;
+}
+
+#turismo {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+#turismo p {
+    font-size: 20em;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* text-shadow: 1px 1px 2px pink, 1px 1px 2px pink; */
+    transition-duration: 0.5s;
+    background-attachment: fixed;
+
+    background-image: url(./mexico.jpg);
+    background-size: cover;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
+
+

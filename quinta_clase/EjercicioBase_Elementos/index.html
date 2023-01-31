@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Elementos basicos</title>
     <style>
-        table, table *{
+        /* table, table *{
             border: 1px solid;
             border-spacing: 0;
             border-collapse: collapse;
@@ -18,7 +19,7 @@
 
         caption {
             caption-side: bottom;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -31,7 +32,7 @@
                     <div>
                         <div class="campo-contenedor">
                             <label for="nombre">Nombre</label>
-                            <input id="nombre" type="text" required/>
+                            <input placeholder="Ej. Emiliano" id="nombre" type="text" required/>
                         </div>
 
                         <div class="campo-contenedor">
@@ -62,6 +63,7 @@
                     <div>
                         <div class="campo-contenedor">
                             <p>¿Qué sistemas operativos sabes usar?</p>
+                            
                             <input id="windows" type="checkbox">
                             <label for="windows">Windows</label>
                             
@@ -138,7 +140,7 @@
             <h2>Enlaces</h2>
             <a href="mailto:emiliano@gmail.com">Mensaje</a>
             <a href="tel:+526121231212">Llamame</a>
-            <a href="http://google.com" target="_blank" rel="">Ir a google</a>
+            <a href="https://quinto-poder.mx/"  rel="">Ir a google</a>
         </div>
 
         <div class="contenedor-elemento">
@@ -158,14 +160,20 @@
                 
             </div>
 
-            <img src="" alt="">
         </div>
 
         <div class="contenedor-elemento">
+            <img src="./mexico.jpg" alt="">
+        </div>
+
+        <div class="contenedor-elemento" id="efecto">
             <h2>Textos</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, excepturi?</p>
-            <p>Iure, doloribus iste! Laudantium inventore repellendus vel et iste nemo?</p>
-            <p>Possimus reprehenderit ullam voluptate esse non nihil. Dolores, obcaecati minus?</p>
+            <p>México</p>
+        </div>
+
+        <div class="contenedor-elemento" id="turismo">
+            <h2>Textos</h2>
+            <p class="turismo">México</p>
         </div>
     </div>
 </body>
